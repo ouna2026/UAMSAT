@@ -139,9 +139,7 @@ footer h3 span{color:#FFD700}
   <div class="menu-liens" id="menuLiens">
     <a href="index.jsp">Accueil</a>
     <a href="about.jsp">A Propos</a>
-    <a href="formations.jsp">Formations</a>
     <a href="admission.jsp">Admission</a>
-    <a href="quiz.jsp">Quiz</a>
     <a href="contact.jsp" class="actif">Contact</a>
     <a href="admission.jsp" class="btn-or">S'inscrire</a>
   </div>
