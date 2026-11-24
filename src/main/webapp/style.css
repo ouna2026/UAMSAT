@@ -149,3 +149,51 @@ footer h3 span{color:#FFD700}
     .partenaires-pro div{min-width:130px;height:80px;padding:10px}
     #rideau h1{font-size:36px;letter-spacing:4px}
 }
+/* TELEPHONE : COMME SUR ORDI, JUSTE PLUS PETIT */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: row !important;
+    padding: 16px 10px !important;
+    gap: 10px !important;
+    align-items: flex-start !important;
+  }
+  .hero-gauche {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+  .hero h1 {
+    font-size: 20px !important;
+  }
+  .hero-droite {
+    flex: 0 0 120px !important;
+    width: 120px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    position: static !important;
+    height: auto !important;
+  }
+  .photo-flottante {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    padding: 5px !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+  .photo-flottante img {
+    width: 100% !important;
+    height: 80px !important;
+    object-fit: cover !important;
+  }
+  .photo-flottante p {
+    font-size: 8px !important;
+  }
+  .photo-2, .photo-3 {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+}
