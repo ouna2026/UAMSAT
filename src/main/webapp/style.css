@@ -20,7 +20,7 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 .menu-liens{display:flex;align-items:center;flex-wrap:wrap}
 .menu-liens a{color:#1A1A1A;margin-left:22px;font-weight:600;font-size:14px;white-space:nowrap}
 .menu-liens a:hover{color:#144A9A}
-.btn-or{background:#C9A227!important;color:#fff!important;padding:10px 22px;border-radius:30px;font-weight:800}
+.btn-or{background:#C9A227!important;color:#fff!important;padding:10px 22px;border-radius:30px;font-weight:800;white-space:nowrap}
 
 #rideau{position:fixed;inset:0;background:#0A234B;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;animation:ouvrirRideau 1s ease 2.8s forwards}
 #rideau h1{color:#FFD700;font-size:52px;letter-spacing:8px;margin:18px 0 10px;font-family:'Playfair Display',serif}
@@ -33,15 +33,15 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 .rideau-bas{color:#CBD5E1;font-size:11px;letter-spacing:2px}
 @keyframes ouvrirRideau{to{transform:translateY(-100%);opacity:0;visibility:hidden}}
 
-.hero{padding:60px 5%;display:flex;gap:40px;align-items:center;background:linear-gradient(135deg,#0A234B 0%,#144A9A 55%,#1E5AA8 100%);color:#fff;min-height:620px}
+.hero{padding:60px 5%;display:flex;gap:40px;align-items:center;background:linear-gradient(135deg,#0A234B 0%,#144A9A 55%,#1E5AA8 100%);color:#fff;min-height:620px;overflow:hidden}
 .hero-gauche{flex:1.2;min-width:0}
 .badge{display:inline-block;background:#C9A227;color:#fff;padding:8px 16px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:1px}
 .hero h1{font-family:'Playfair Display',serif;font-size:52px;line-height:1.08;margin:20px 0}
 .hero h1 span{color:#FFD700}
 .hero p{color:#E2E8F0;line-height:1.7;font-size:16px;max-width:580px}
 .btns{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
-.btn1{background:#C9A227;color:#fff;padding:14px 28px;border-radius:30px;font-weight:800;display:inline-flex;align-items:center;justify-content:center}
-.btn2{border:2px solid #fff;color:#fff;padding:12px 26px;border-radius:30px;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
+.btn1{background:#C9A227;color:#fff;padding:14px 28px;border-radius:30px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap}
+.btn2{border:2px solid #fff;color:#fff;padding:12px 26px;border-radius:30px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap}
 .hero-infos{margin-top:28px;display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:#E2E8F0}
 .hero-droite{flex:1;position:relative;height:520px;min-width:0}
 .photo-flottante{position:absolute;background:#fff;color:#1A1A1A;border-radius:18px;padding:10px;box-shadow:0 20px 40px rgba(0,0,0,.35);animation:flotter 4s ease-in-out infinite}
@@ -72,7 +72,7 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 .filieres h2{text-align:center;font-family:'Playfair Display',serif;font-size:36px;color:#144A9A}
 .filieres p.sous{text-align:center;color:#64748B;margin:10px 0 28px}
 .filtres{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:30px}
-.filtres button{padding:10px 22px;border-radius:30px;border:2px solid #144A9A;background:#fff;font-weight:700;cursor:pointer}
+.filtres button{padding:10px 22px;border-radius:30px;border:2px solid #144A9A;background:#fff;font-weight:700;cursor:pointer;white-space:nowrap}
 .filtres button.actif{background:#144A9A;color:#fff}
 .grille{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .carte{border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.08);background:#fff;min-width:0}
@@ -120,104 +120,106 @@ footer h3 span{color:#FFD700}
 .foot-bas{text-align:center;margin-top:25px;font-size:12px;border-top:1px solid rgba(255,255,255,.15);padding-top:15px}
 
 .quiz-container,.quiz-box,.quiz-wrap,.question-box{width:100%;max-width:900px;margin:0 auto;padding:30px 5%;box-sizing:border-box}
-.quiz-container h1,.quiz-box h1{font-size:30px;color:#144A9A;line-height:1.3}
-.options,.choix,.reponses{display:flex;flex-direction:column;gap:12px;margin-top:18px}
-.options label,.options button,.choix label,.choix button,.reponses label,.reponses button{width:100%;text-align:left;white-space:normal;line-height:1.5;padding:14px 16px;border:2px solid #E2E8F0;border-radius:14px;background:#fff;cursor:pointer;font-size:15px}
+.quiz-container h1,.quiz-box h1{font-size:30px;color:#144A9A;line-height:1.3;text-align:center}
+.quiz-container p,.quiz-box p{text-align:center;line-height:1.6}
+.options,.choix,.reponses,.quiz-choix{display:flex;flex-direction:row;gap:12px;margin-top:18px;justify-content:center;flex-wrap:wrap}
+.options label,.options button,.choix label,.choix button,.reponses label,.reponses button,.quiz-choix a,.quiz-choix button{white-space:nowrap;padding:14px 22px;border:2px solid #144A9A;border-radius:30px;background:#fff;cursor:pointer;font-size:15px;font-weight:700;color:#144A9A;text-align:center}
+.options label:hover,.options button:hover,.quiz-choix a:hover{background:#144A9A;color:#fff}
 input,select,textarea{max-width:100%;font-size:16px}
 button{cursor:pointer}
 
 @media(max-width:900px){
-    .hero{flex-direction:column;min-height:auto}
-    .hero h1{font-size:36px}
-    .hero-droite{height:560px;width:100%}
-    .stats{grid-template-columns:repeat(2,1fr);margin:-20px 5% 0}
-    .qui-sommes-nous{flex-direction:column}
-    .grille{grid-template-columns:1fr 1fr}
-    .avantages{grid-template-columns:1fr 1fr}
-    .menu-liens a{margin-left:12px;font-size:13px}
+  .hero{flex-direction:column;min-height:auto}
+  .hero h1{font-size:36px}
+  .hero-droite{height:560px;width:100%}
+  .stats{grid-template-columns:repeat(2,1fr);margin:-20px 5% 0}
+  .qui-sommes-nous{flex-direction:column}
+  .grille{grid-template-columns:1fr 1fr}
+  .avantages{grid-template-columns:1fr 1fr}
+  .menu-liens a{margin-left:12px;font-size:13px}
 }
 
 @media(max-width:768px){
-    nav{padding:10px 14px;flex-direction:column;align-items:stretch;gap:10px}
-    .logo{font-size:19px;justify-content:center}
-    .menu-liens{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-    .menu-liens::-webkit-scrollbar{display:none}
-    .menu-liens a{margin-left:0;margin-right:8px;background:#F2F6FC;padding:8px 14px;border-radius:20px;flex-shrink:0}
-    .menu-liens a.btn-or{padding:8px 14px}
-    .hero{padding:35px 16px;gap:24px;text-align:center}
-    .hero-gauche{width:100%}
-    .hero h1{font-size:30px}
-    .hero p{font-size:14px;margin:0 auto}
-    .btns{justify-content:center}
-    .btn1,.btn2{width:100%;max-width:360px}
-    .hero-infos{justify-content:center;font-size:12px}
-    /* LE FIX IMPORTANT : photos ne sont plus absolute, elles ne se coincent plus */
-    .hero-droite{height:auto!important;display:flex;flex-direction:column;gap:14px;align-items:center}
-    .photo-flottante{position:static!important;transform:none!important;animation:flotter 4s ease-in-out infinite;width:100%!important;max-width:340px;height:auto!important}
-    .photo-flottante img{height:180px!important;object-fit:cover}
-    .photo-2,.photo-3{width:100%;max-width:340px;height:auto}
-    .stats{padding:24px 14px;gap:12px}
-    .stats b{font-size:24px}
-    .qui-sommes-nous{padding:35px 16px}
-    .qui-contenu h2{font-size:26px}
-    .check{grid-template-columns:1fr 1fr}
-    .filieres{padding:35px 16px}
-    .filieres h2{font-size:24px}
-    .filtres button{padding:8px 16px;font-size:13px}
-    .grille{grid-template-columns:1fr 1fr}
-    .tarifs{padding:35px 14px}
-    .tarifs h2{font-size:24px}
-    .table-tarifs table{min-width:560px;font-size:13px}
-    .pourquoi{padding:35px 16px}
-    .pourquoi h2{font-size:24px}
-    .partenaires-pro{gap:12px}
-    .partenaires-pro div{min-width:140px;height:80px;padding:10px;flex:1 1 40%}
-    .foot{flex-direction:column;gap:16px}
-    #rideau{padding:20px 16px}
-    #rideau h1{font-size:38px;letter-spacing:4px}
-    .quiz-container,.quiz-box{padding:22px 16px}
-    .quiz-container h1,.quiz-box h1{font-size:22px}
-    .options label,.options button,.choix label,.choix button{font-size:14px;padding:12px}
+  nav{padding:10px 14px;flex-direction:column;align-items:stretch;gap:10px}
+  .logo{font-size:19px;justify-content:center}
+  .menu-liens{justify-content:flex-start;flex-wrap:nowrap!important;overflow-x:auto!important;width:100%;padding-bottom:8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .menu-liens::-webkit-scrollbar{display:none}
+  .menu-liens a{margin:0 8px 0 0!important;background:#F2F6FC;padding:8px 14px;border-radius:20px;flex-shrink:0}
+  .menu-liens a.btn-or{padding:8px 14px}
+  .hero{padding:35px 16px;gap:24px;text-align:center}
+  .hero-gauche{width:100%}
+  .hero h1{font-size:30px}
+  .hero p{font-size:14px;margin:0 auto;max-width:100%}
+  .btns{justify-content:center}
+  .btn1,.btn2{width:100%;max-width:360px}
+  .hero-infos{justify-content:center;font-size:12px}
+  .hero-droite{height:auto!important;display:flex!important;flex-direction:column!important;gap:14px!important;align-items:center!important}
+  .photo-flottante{position:static!important;transform:none!important;width:100%!important;max-width:340px!important;height:auto!important;margin:0 auto!important}
+  .photo-flottante img{height:180px!important;object-fit:cover}
+  .photo-2,.photo-3{width:100%;max-width:340px;height:auto}
+  .stats{padding:24px 14px;gap:12px}
+  .stats b{font-size:24px}
+  .qui-sommes-nous{padding:35px 16px}
+  .qui-contenu h2{font-size:26px}
+  .check{grid-template-columns:1fr 1fr}
+  .filieres{padding:35px 16px}
+  .filieres h2{font-size:24px}
+  .filtres button{padding:8px 16px;font-size:13px}
+  .grille{grid-template-columns:1fr 1fr}
+  .tarifs{padding:35px 14px}
+  .tarifs h2{font-size:24px}
+  .table-tarifs table{min-width:560px;font-size:13px}
+  .pourquoi{padding:35px 16px}
+  .pourquoi h2{font-size:24px}
+  .partenaires-pro{gap:12px}
+  .partenaires-pro div{min-width:140px;height:80px;padding:10px;flex:1 1 40%}
+  .foot{flex-direction:column;gap:16px}
+  #rideau{padding:20px 16px}
+  #rideau h1{font-size:38px;letter-spacing:4px}
+  .quiz-container,.quiz-box{padding:22px 16px}
+  .quiz-container h1,.quiz-box h1{font-size:22px}
+  .options,.choix,.reponses,.quiz-choix{flex-direction:column!important;gap:10px!important}
+  .options label,.options button,.choix label,.choix button,.quiz-choix a,.quiz-choix button{width:100%!important;white-space:normal!important}
 }
+
 @media(max-width:480px){
-    .bande-defilante{font-size:11px}
-    .logo{font-size:17px;gap:8px}
-    .logo-bloc{width:44px;height:44px}
-    .hero{padding:26px 12px}
-    .hero h1{font-size:25px;line-height:1.15}
-    .badge{font-size:10px;padding:6px 12px}
-    .btn1,.btn2{width:100%;max-width:100%;padding:13px 16px;font-size:14px}
-    .hero-infos{flex-direction:column;gap:6px;align-items:center}
-    .photo-flottante{max-width:100%}
-    .stats{grid-template-columns:1fr 1fr;margin:-15px 12px 0;padding:20px 10px}
-    .stats b{font-size:20px}
-    .stats span{font-size:11px}
-    .qui-sommes-nous{padding:26px 12px}
-    .qui-contenu h2{font-size:22px}
-    .check{grid-template-columns:1fr}
-    .filieres{padding:26px 12px}
-    .grille{grid-template-columns:1fr}
-    .carte .haut{font-size:17px;height:120px}
-    .avantages{grid-template-columns:1fr}
-    .tarifs{padding:26px 10px}
-    .table-tarifs table{min-width:520px;font-size:12px}
-    .table-tarifs th,.table-tarifs td{padding:10px 8px}
-    .partenaires{padding:30px 12px}
-    .partenaires-pro div{min-width:0;flex:1 1 44%;height:72px;padding:8px}
-    .partenaires-pro img{height:55px!important}
-    footer{padding:28px 12px 16px}
-    #rideau h1{font-size:30px;letter-spacing:2px}
-    #rideau .rideau-univ{font-size:11px;letter-spacing:1px}
-    #rideau .rideau-slogan{font-size:17px}
-    #rideau .rideau-barre{width:170px}
-    .quiz-container,.quiz-box{padding:18px 12px}
-    .quiz-container h1,.quiz-box h1{font-size:19px}
+  .bande-defilante{font-size:11px}
+  .logo{font-size:17px;gap:8px}
+  .logo-bloc{width:44px;height:44px}
+  .hero{padding:26px 12px}
+  .hero h1{font-size:25px;line-height:1.15}
+  .badge{font-size:10px;padding:6px 12px}
+  .btn1,.btn2{width:100%;max-width:100%;padding:13px 16px;font-size:14px}
+  .hero-infos{flex-direction:column;gap:6px;align-items:center}
+  .photo-flottante{max-width:100%}
+  .stats{grid-template-columns:1fr 1fr;margin:-15px 12px 0;padding:20px 10px}
+  .stats b{font-size:20px}
+  .stats span{font-size:11px}
+  .qui-sommes-nous{padding:26px 12px}
+  .qui-contenu h2{font-size:22px}
+  .check{grid-template-columns:1fr}
+  .filieres{padding:26px 12px}
+  .grille{grid-template-columns:1fr}
+  .carte .haut{font-size:17px;height:120px}
+  .avantages{grid-template-columns:1fr}
+  .tarifs{padding:26px 10px}
+  .table-tarifs table{min-width:520px;font-size:12px}
+  .table-tarifs th,.table-tarifs td{padding:10px 8px}
+  .partenaires{padding:30px 12px}
+  .partenaires-pro div{min-width:0;flex:1 1 44%;height:72px;padding:8px}
+  .partenaires-pro img{height:55px!important}
+  footer{padding:28px 12px 16px}
+  #rideau h1{font-size:30px;letter-spacing:2px}
+  #rideau .rideau-univ{font-size:11px;letter-spacing:1px}
+  #rideau .rideau-slogan{font-size:17px}
+  #rideau .rideau-barre{width:170px}
+  .quiz-container,.quiz-box{padding:18px 12px}
+  .quiz-container h1,.quiz-box h1{font-size:19px}
 }
 
 @media(max-width:360px){
-    .hero h1{font-size:22px}
-    .stats{grid-template-columns:1fr 1fr}
-    .menu-liens a{font-size:12px;padding:7px 11px}
-    .filtres button{padding:7px 12px;font-size:12px}
-    .partenaires-pro div{flex:1 1 100%}
+  .hero h1{font-size:22px}
+  .menu-liens a{font-size:12px;padding:7px 11px}
+  .filtres button{padding:7px 12px;font-size:12px}
+  .partenaires-pro div{flex:1 1 100%}
 }
