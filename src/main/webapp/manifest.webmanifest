@@ -1,1 +1,37 @@
-
+{
+  "name": "UAMSAT - Université Africaine de Management, des Sciences Appliquées et de Télécommunications",
+  "short_name": "UAMSAT",
+  "description": "Osez rêver, réalisez votre potentiel ! La Formation pour l'Employabilité !",
+  "lang": "fr",
+  "start_url": "/index.jsp",
+  "display": "standalone",
+  "background_color": "#0A1F44",
+  "theme_color": "#0A1F44",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/img/logo-uamsat.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/logo-uamsat.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/logo-uamsat.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/img/logo-uamsat.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
