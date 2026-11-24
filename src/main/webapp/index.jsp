@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UAMSAT - Universite Africaine de Management, des Sciences Appliquees et de Telecommunications</title>
 
-<!-- Logo UAMSAT + Installation PWA -->
 <link rel="icon" type="image/png" href="assets/img/logo-uamsat.png">
 <link rel="apple-touch-icon" href="assets/img/logo-uamsat.png">
 <link rel="manifest" href="manifest.webmanifest">
