@@ -164,7 +164,7 @@
   <h2>Nos partenariats</h2>
   <p class="sous">Ils nous font confiance pour former leurs futurs collaborateurs.</p>
   <div class="partenaires-pro">
-    <div><img src="assets/img/logo-【entity-ubs¦canonical_name=UBS】.png" alt="【entity-UBS¦canonical_name=UBS】" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
+    <div><img src="assets/img/logo-ubs.png" alt="UBS" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
     <div><img src="assets/img/logo-aum.png" alt="AUM" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
     <div><img src="assets/img/logo-ist.png" alt="IST" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
     <div><img src="assets/img/logo-cames.png" alt="CAMES" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
@@ -177,7 +177,7 @@
   <div class="foot">
     <div><b>Universite UAMSAT</b><br>Universite Africaine de Management,<br>des Sciences Appliquees et de Telecommunications<br><br><i class="fa-solid fa-location-dot"></i> Avenue du 3e Pont - Missabougou<br>Cite UNICEF face a la station SONEF</div>
     <div><b>Contact</b><br><i class="fa-solid fa-phone"></i> +223 90 26 96 27<br><i class="fa-solid fa-phone"></i> +223 65 32 32 42<br><i class="fa-solid fa-envelope"></i> infos@uamsat.com<br><i class="fa-solid fa-globe"></i> www.uamsat.com</div>
-    <div><b>Partenariats</b><br>【entity-UBS¦canonical_name=UBS】 - AUM - IST<br>CAMES - TechnoLAB-ISTA</div>
+    <div><b>Partenariats</b><br>UBS - AUM - IST<br>CAMES - TechnoLAB-ISTA</div>
   </div>
   <p class="foot-liens">
     <a href="index.jsp">Accueil</a> | <a href="about.jsp">A Propos</a> | <a href="formations.jsp">Formations</a> | <a href="admission.jsp">Admission</a> | <a href="contact.jsp">Contact</a>
