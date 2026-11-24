@@ -5,11 +5,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>À Propos - UAMSAT</title>
+
+<!-- Logo UAMSAT + Installation PWA -->
+<link rel="icon" type="image/png" href="assets/img/logo-uamsat.png">
+<link rel="apple-touch-icon" href="assets/img/logo-uamsat.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0A1F44">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="UAMSAT">
+
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-/* ABOUT - TOUT DANS LA PAGE - PAS DE CONFLIT */
 .ab-wrap{max-width:1100px;margin:0 auto;padding:0 20px;background:#fff;overflow:hidden}
 .ab-hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:35px;align-items:center;padding:45px 0 30px}
 .ab-left{min-width:0}
@@ -19,7 +28,7 @@
 .ab-sous{font-size:16px;line-height:1.6;color:#1E293B;font-weight:600;margin-bottom:10px}
 .ab-desc{font-size:15px;line-height:1.7;color:#64748B;margin-bottom:0}
 .ab-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-.ab-btns a{display:inline-block;padding:13px 24px;border-radius:30px;font-weight:700;font-size:14px;text-decoration:none}
+.ab-btns a{display:inline-block;padding:13px 24px;border-radius:30px;font-weight:700;font-size:14px;text-decoration:none;text-align:center}
 .ab-btns .b1{background:#C9A227;color:#fff}
 .ab-btns .b2{border:2px solid #144A9A;color:#144A9A;background:#fff}
 .ab-minis{display:flex;gap:28px;margin-top:28px;padding-top:20px;border-top:1px solid #E2E8F0;flex-wrap:wrap}
@@ -40,7 +49,7 @@
 .ab-cards b{color:#144A9A}
 .ab-cards p{font-size:14px;line-height:1.6;color:#64748B;margin-top:6px}
 .ab-infos{background:#F2F6FC;border-radius:16px;padding:24px;margin-top:30px}
-.ab-infos p{font-size:15px;border-bottom:1px solid #E2E8F0;padding-bottom:10px}
+.ab-infos p{font-size:15px;border-bottom:1px solid #E2E8F0;padding-bottom:10px;word-wrap:break-word}
 .ab-fin{text-align:center;margin-top:40px}
 .ab-fin h2{font-family:'Playfair Display',serif;color:#144A9A;font-size:26px;margin-bottom:18px}
 .ab-fin a{display:inline-block;background:#C9A227;color:#fff;padding:14px 28px;border-radius:30px;font-weight:800;text-decoration:none}
@@ -51,6 +60,20 @@
   .ab-right img{margin:0 auto}
   .ab-cards{grid-template-columns:1fr}
   .ab-float{left:50%;transform:translateX(-50%);white-space:nowrap}
+}
+@media(max-width:480px){
+  .ab-wrap{padding:0 14px}
+  .ab-left h1{font-size:26px}
+  .ab-sous{font-size:14px}
+  .ab-desc{font-size:14px}
+  .ab-btns a{width:100%}
+  .ab-minis{gap:16px}
+  .ab-float{white-space:normal;width:85%;text-align:center}
+  .ab-content h2{font-size:22px}
+  .ab-content p{font-size:14px}
+  .ab-infos{padding:18px 14px}
+  .ab-fin h2{font-size:22px}
+  .ab-fin a{width:100%}
 }
 </style>
 </head>
@@ -71,7 +94,10 @@
     </div>
     <div>UAMSAT<span>.</span></div>
   </div>
-  <div class="menu-liens">
+
+  <button class="menu-burger" id="menuBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+
+  <div class="menu-liens" id="menuLiens">
     <a href="index.jsp">Accueil</a>
     <a href="about.jsp" class="lien-actif">A Propos</a>
     <a href="formations.jsp">Formations</a>
@@ -147,7 +173,7 @@
   <div class="foot">
     <div><b>Université UAMSAT</b><br>Université Africaine de Management,<br>des Sciences Appliquées et de Télécommunications<br><br>Avenue du 3e Pont - Missabougou<br>Cité UNICEF face à la station SONEF</div>
     <div><b>Contact</b><br>+223 90 26 96 27<br>+223 65 32 32 42<br>infos@uamsat.com<br>www.uamsat.com</div>
-    <div><b>Partenariats</b><br>U B S - A U M - I S T<br>CAMES - TechnoLAB-ISTA</div>
+    <div><b>Partenariats</b><br> UBS - AUM - IST<br>CAMES - TechnoLAB-ISTA</div>
   </div>
   <p class="foot-liens">
     <a href="index.jsp">Accueil</a> | <a href="about.jsp">A Propos</a> | <a href="formations.jsp">Formations</a> | <a href="admission.jsp">Admission</a> | <a href="contact.jsp">Contact</a>
@@ -155,5 +181,13 @@
   <p class="foot-bas">© 2026 UAMSAT - Une École au service du développement, agréée, reconnue par l'État Malien et le CAMES.</p>
 </footer>
 
+<script src="script.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js');
+  });
+}
+</script>
 </body>
 </html>
