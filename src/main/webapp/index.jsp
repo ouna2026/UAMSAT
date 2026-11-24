@@ -102,7 +102,7 @@
     <p>UAMSAT est agreee et reconnue par l'Etat Malien et le CAMES. Notre objectif est de former les leaders de demain par une pedagogie d'ouverture, la culture de l'excellence et l'innovation.</p>
     <div class="check">
       <div><i class="fa-solid fa-circle-check"></i> <b>Diplomes reconnus</b><br><span>Etat Malien + CAMES</span></div>
-      <div><i class="fa-solid fa-circle-check"></i> <b>Certifications</b><br><span>HUAWEI ICT + 【entity-MICROSOFT¦canonical_name=MICROSOFT】</span></div>
+      <div><i class="fa-solid fa-circle-check"></i> <b>Certifications</b><br><span>I.T& DESIGN Campus + QUALITE PLAISANCE</span></div>
       <div><i class="fa-solid fa-circle-check"></i> <b>Partenariat</b><br><span>TechnoLAB - ISTA</span></div>
       <div><i class="fa-solid fa-circle-check"></i> <b>International</b><br><span>Gabon, Burkina Faso, etc.</span></div>
     </div>
