@@ -5,16 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UAMSAT - Universite Africaine de Management, des Sciences Appliquees et de Telecommunications</title>
-
 <link rel="icon" type="image/png" href="assets/img/logo-uamsat.png">
 <link rel="apple-touch-icon" href="assets/img/logo-uamsat.png">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0A1F44">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="UAMSAT">
-
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -39,7 +36,13 @@
     </div>
     <div>UAMSAT<span>.</span></div>
   </div>
-  <div class="menu-liens">
+
+  <!-- BOUTON 3 BARRES - TELEPHONE UNIQUEMENT -->
+  <button class="menu-burger" id="menuBurger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="menu-liens" id="menuLiens">
     <a href="index.jsp">Accueil</a>
     <a href="about.jsp">A Propos</a>
     <a href="formations.jsp">Formations</a>
@@ -77,11 +80,11 @@
   </div>
   <div class="hero-droite">
     <div class="photo-flottante photo-2">
-      <img src="assets/img/photo-couloir.jpg" alt="Etudiantes polo rose clair" width="210" height="240" style="width:100%;height:200px;object-fit:cover;border-radius:12px;">
+      <img src="assets/img/photo-couloir.jpg" alt="Etudiantes polo rose clair" style="width:100%;height:200px;object-fit:cover;border-radius:12px;">
       <p>Vie etudiante - Polo rose clair</p>
     </div>
     <div class="photo-flottante photo-3">
-      <img src="assets/img/photo-groupe.jpg" alt="Groupe UAMSAT" width="200" height="220" style="width:100%;height:180px;object-fit:cover;border-radius:12px;">
+      <img src="assets/img/photo-groupe.jpg" alt="Groupe UAMSAT" style="width:100%;height:180px;object-fit:cover;border-radius:12px;">
       <p>Nos diplomes</p>
     </div>
   </div>
@@ -102,13 +105,13 @@
     <p>UAMSAT est agreee et reconnue par l'Etat Malien et le CAMES. Notre objectif est de former les leaders de demain par une pedagogie d'ouverture, la culture de l'excellence et l'innovation.</p>
     <div class="check">
       <div><i class="fa-solid fa-circle-check"></i> <b>Diplomes reconnus</b><br><span>Etat Malien + CAMES</span></div>
-      <div><i class="fa-solid fa-circle-check"></i> <b>Certifications</b><br><span>I.T& DESIGN Campus + QUALITE PLAISANCE</span></div>
+      <div><i class="fa-solid fa-circle-check"></i> <b>Certifications</b><br><span>HUAWEI ICT + 【entity-MICROSOFT¦canonical_name=MICROSOFT】</span></div>
       <div><i class="fa-solid fa-circle-check"></i> <b>Partenariat</b><br><span>TechnoLAB - ISTA</span></div>
       <div><i class="fa-solid fa-circle-check"></i> <b>International</b><br><span>Gabon, Burkina Faso, etc.</span></div>
     </div>
   </div>
   <div class="qui-photo">
-    <img src="assets/img/photo-classe.jpg" alt="Etudiants en classe" width="500" height="350" style="width:100%;height:350px;object-fit:cover;border-radius:20px;">
+    <img src="assets/img/photo-classe.jpg" alt="Etudiants en classe" style="width:100%;height:350px;object-fit:cover;border-radius:20px;">
   </div>
 </section>
 
@@ -164,11 +167,11 @@
   <h2>Nos partenariats</h2>
   <p class="sous">Ils nous font confiance pour former leurs futurs collaborateurs.</p>
   <div class="partenaires-pro">
-    <div><img src="assets/img/logo-ubs.png" alt="UBS" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
-    <div><img src="assets/img/logo-aum.png" alt="AUM" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
-    <div><img src="assets/img/logo-ist.png" alt="IST" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
-    <div><img src="assets/img/logo-cames.png" alt="CAMES" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
-    <div><img src="assets/img/logo-technolab-ista.png" alt="TechnoLAB-ISTA" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
+    <div><img src="assets/img/logo-【entity-ubs¦canonical_name=UBS】.png" alt="【entity-UBS¦canonical_name=UBS】" style="width:140px;height:70px;object-fit:contain;"></div>
+    <div><img src="assets/img/logo-aum.png" alt="AUM" style="width:140px;height:70px;object-fit:contain;"></div>
+    <div><img src="assets/img/logo-ist.png" alt="IST" style="width:140px;height:70px;object-fit:contain;"></div>
+    <div><img src="assets/img/logo-cames.png" alt="CAMES" style="width:140px;height:70px;object-fit:contain;"></div>
+    <div><img src="assets/img/logo-technolab-ista.png" alt="TechnoLAB-ISTA" style="width:140px;height:70px;object-fit:contain;"></div>
   </div>
 </section>
 
@@ -177,7 +180,7 @@
   <div class="foot">
     <div><b>Universite UAMSAT</b><br>Universite Africaine de Management,<br>des Sciences Appliquees et de Telecommunications<br><br><i class="fa-solid fa-location-dot"></i> Avenue du 3e Pont - Missabougou<br>Cite UNICEF face a la station SONEF</div>
     <div><b>Contact</b><br><i class="fa-solid fa-phone"></i> +223 90 26 96 27<br><i class="fa-solid fa-phone"></i> +223 65 32 32 42<br><i class="fa-solid fa-envelope"></i> infos@uamsat.com<br><i class="fa-solid fa-globe"></i> www.uamsat.com</div>
-    <div><b>Partenariats</b><br>UBS - AUM - IST<br>CAMES - TechnoLAB-ISTA</div>
+    <div><b>Partenariats</b><br>【entity-UBS¦canonical_name=UBS】 - AUM - IST<br>CAMES - TechnoLAB-ISTA</div>
   </div>
   <p class="foot-liens">
     <a href="index.jsp">Accueil</a> | <a href="about.jsp">A Propos</a> | <a href="formations.jsp">Formations</a> | <a href="admission.jsp">Admission</a> | <a href="contact.jsp">Contact</a>
