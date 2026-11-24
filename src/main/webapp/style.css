@@ -3,25 +3,27 @@ body{background:#F2F6FC;color:#1A1A1A;overflow-x:hidden}
 i{margin-right:8px}
 a{text-decoration:none}
 img{max-width:100%;height:auto}
-
 .bande-defilante{background:#0A234B;color:#fff;overflow:hidden;padding:9px 0;font-size:13px;font-weight:600;white-space:nowrap}
 .defile{display:inline-block;animation:defiler 28s linear infinite}
 .defile span{margin:0 35px}
 .defile span::before{content:"• ";color:#FFD700}
 @keyframes defiler{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
-
 nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-content:space-between;align-items:center;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.08);z-index:100}
 .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px;color:#144A9A;white-space:nowrap}
 .logo span{color:#C9A227}
 .logo-bloc{position:relative;width:52px;height:52px;flex-shrink:0}
-.logo-fixe{width:52px;height:52px;object-fit:contain}
 .logo-terre-tourne{position:absolute;right:-6px;bottom:-6px;background:#C9A227;color:#fff;width:22px;height:22px;border-radius:50%;display:flex!important;align-items:center;justify-content:center;font-size:11px;margin:0!important;animation:tournerTerre 8s linear infinite;border:2px solid #fff}
 @keyframes tournerTerre{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 .menu-liens{display:flex;align-items:center;flex-wrap:wrap}
 .menu-liens a{color:#1A1A1A;margin-left:22px;font-weight:600;font-size:14px;white-space:nowrap}
 .menu-liens a:hover{color:#144A9A}
 .btn-or{background:#C9A227!important;color:#fff!important;padding:10px 22px;border-radius:30px;font-weight:800;white-space:nowrap}
-
+/* Bouton 3 barres - CACHE sur PC, VISIBLE sur telephone */
+.menu-burger{display:none;width:42px;height:42px;background:#0A234B;border:none;border-radius:10px;cursor:pointer;flex-direction:column;align-items:center;justify-content:center;gap:6px;flex-shrink:0}
+.menu-burger span{display:block;width:22px;height:3px;background:#fff;border-radius:3px;transition:.3s}
+.menu-burger.ouvert span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+.menu-burger.ouvert span:nth-child(2){opacity:0}
+.menu-burger.ouvert span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
 #rideau{position:fixed;inset:0;background:#0A234B;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;animation:ouvrirRideau 1s ease 2.8s forwards}
 #rideau h1{color:#FFD700;font-size:52px;letter-spacing:8px;margin:18px 0 10px;font-family:'Playfair Display',serif}
 .rideau-ligne{width:70px;height:3px;background:#C9A227;margin:16px auto}
@@ -32,7 +34,6 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 @keyframes remplir{to{width:100%}}
 .rideau-bas{color:#CBD5E1;font-size:11px;letter-spacing:2px}
 @keyframes ouvrirRideau{to{transform:translateY(-100%);opacity:0;visibility:hidden}}
-
 .hero{padding:60px 5%;display:flex;gap:40px;align-items:center;background:linear-gradient(135deg,#0A234B 0%,#144A9A 55%,#1E5AA8 100%);color:#fff;min-height:620px;overflow:hidden}
 .hero-gauche{flex:1.2;min-width:0}
 .badge{display:inline-block;background:#C9A227;color:#fff;padding:8px 16px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:1px}
@@ -49,12 +50,10 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 .photo-2{width:230px;height:270px;top:20px;right:0;animation-delay:1s}
 .photo-3{width:210px;height:250px;bottom:20px;left:0;animation-delay:2s}
 @keyframes flotter{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-
 .stats{background:#fff;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:35px 5%;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.06);margin:-35px 5% 0;position:relative;z-index:5;border-radius:18px}
 .stats i{color:#144A9A;font-size:24px;display:block;margin-bottom:8px}
 .stats b{font-size:32px;color:#144A9A;display:block}
 .stats span{color:#64748B;font-size:13px}
-
 .qui-sommes-nous{position:relative;padding:70px 5%;display:flex;gap:40px;align-items:center;overflow:hidden}
 .fond-transparent{position:absolute;inset:0;background-image:url('assets/img/photo-classe.jpg');background-size:cover;background-position:center;opacity:0.12}
 .qui-contenu{position:relative;z-index:2;flex:1.2;min-width:0}
@@ -67,7 +66,6 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 .check span{color:#64748B;font-size:13px}
 .qui-photo{position:relative;z-index:2;flex:1;min-width:0}
 .qui-photo img{border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,.15)}
-
 .filieres{padding:70px 5%;background:#fff}
 .filieres h2{text-align:center;font-family:'Playfair Display',serif;font-size:36px;color:#144A9A}
 .filieres p.sous{text-align:center;color:#64748B;margin:10px 0 28px}
@@ -85,7 +83,6 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 .carte .bas p{color:#64748B;font-size:14px;line-height:1.6;margin:8px 0}
 .prix{margin-top:12px;font-weight:800;font-size:17px}
 .prix span{font-size:12px;color:#64748B;font-weight:400}
-
 .tarifs{padding:70px 5%;background:#144A9A;color:#fff}
 .tarifs h2{text-align:center;font-family:'Playfair Display',serif;font-size:34px}
 .tarifs h2 span{color:#FFD700}
@@ -94,7 +91,6 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 .table-tarifs th{background:#0A234B;color:#fff;padding:14px;text-align:left;white-space:nowrap}
 .table-tarifs td{padding:14px;border-bottom:1px solid #E2E8F0}
 .paiement-note{text-align:center;margin-top:18px;color:#E2E8F0;font-size:14px;line-height:1.7}
-
 .pourquoi{padding:70px 5%;background:#F2F6FC;text-align:center}
 .pourquoi h2{font-family:'Playfair Display',serif;font-size:34px;color:#144A9A}
 .pourquoi h2 span{color:#C9A227}
@@ -102,13 +98,11 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 .avantages div{background:#fff;padding:20px;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.05);text-align:left;min-width:0}
 .avantages i{color:#C9A227;font-size:22px;display:block;margin-bottom:10px}
 .avantages span{color:#64748B;font-size:13px}
-
 .partenaires{padding:60px 5%;background:#fff;text-align:center}
 .partenaires h2{font-family:'Playfair Display',serif;color:#144A9A;font-size:32px}
 .partenaires p.sous{color:#64748B;margin-top:10px}
 .partenaires-pro{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;margin-top:30px}
 .partenaires-pro div{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:14px;padding:16px 20px;display:flex;align-items:center;justify-content:center;min-width:160px;height:95px}
-
 footer{background:#0A234B;color:#CBD5E1;padding:45px 5% 20px}
 footer h3{color:#fff;font-size:24px}
 footer h3 span{color:#FFD700}
@@ -118,16 +112,13 @@ footer h3 span{color:#FFD700}
 .foot-liens a{color:#E2E8F0;font-size:13px;margin:0 6px}
 .foot-liens a:hover{color:#FFD700}
 .foot-bas{text-align:center;margin-top:25px;font-size:12px;border-top:1px solid rgba(255,255,255,.15);padding-top:15px}
-
-.quiz-container,.quiz-box,.quiz-wrap,.question-box{width:100%;max-width:900px;margin:0 auto;padding:30px 5%;box-sizing:border-box}
+.quiz-container,.quiz-box{width:100%;max-width:900px;margin:0 auto;padding:30px 5%}
 .quiz-container h1,.quiz-box h1{font-size:30px;color:#144A9A;line-height:1.3;text-align:center}
 .quiz-container p,.quiz-box p{text-align:center;line-height:1.6}
 .options,.choix,.reponses,.quiz-choix{display:flex;flex-direction:row;gap:12px;margin-top:18px;justify-content:center;flex-wrap:wrap}
-.options label,.options button,.choix label,.choix button,.reponses label,.reponses button,.quiz-choix a,.quiz-choix button{white-space:nowrap;padding:14px 22px;border:2px solid #144A9A;border-radius:30px;background:#fff;cursor:pointer;font-size:15px;font-weight:700;color:#144A9A;text-align:center}
-.options label:hover,.options button:hover,.quiz-choix a:hover{background:#144A9A;color:#fff}
+.options label,.options button,.choix label,.choix button,.quiz-choix a,.quiz-choix button{white-space:nowrap;padding:14px 22px;border:2px solid #144A9A;border-radius:30px;background:#fff;cursor:pointer;font-size:15px;font-weight:700;color:#144A9A;text-align:center}
 input,select,textarea{max-width:100%;font-size:16px}
 button{cursor:pointer}
-
 @media(max-width:900px){
   .hero{flex-direction:column;min-height:auto}
   .hero h1{font-size:36px}
@@ -138,14 +129,15 @@ button{cursor:pointer}
   .avantages{grid-template-columns:1fr 1fr}
   .menu-liens a{margin-left:12px;font-size:13px}
 }
-
+/* ===== TELEPHONE : MENU 3 BARRES A DROITE ===== */
 @media(max-width:768px){
-  nav{padding:10px 14px;flex-direction:column;align-items:stretch;gap:10px}
-  .logo{font-size:19px;justify-content:center}
-  .menu-liens{justify-content:flex-start;flex-wrap:nowrap!important;overflow-x:auto!important;width:100%;padding-bottom:8px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .menu-liens::-webkit-scrollbar{display:none}
-  .menu-liens a{margin:0 8px 0 0!important;background:#F2F6FC;padding:8px 14px;border-radius:20px;flex-shrink:0}
-  .menu-liens a.btn-or{padding:8px 14px}
+  nav{padding:10px 14px;flex-direction:row!important;justify-content:space-between!important;align-items:center!important;flex-wrap:nowrap!important}
+  .logo{font-size:18px}
+  .menu-burger{display:flex!important}
+  .menu-liens{position:absolute!important;top:100%!important;left:0!important;right:0!important;width:100%!important;background:#fff!important;flex-direction:column!important;align-items:stretch!important;gap:0!important;padding:0 0 14px 0!important;box-shadow:0 15px 30px rgba(0,0,0,.15)!important;display:none!important;z-index:99}
+  .menu-liens.ouvert{display:flex!important}
+  .menu-liens a{margin:0!important;padding:14px 18px!important;background:#fff!important;border-bottom:1px solid #F1F5F9!important;border-radius:0!important;font-size:15px!important}
+  .menu-liens a.btn-or{margin:12px 18px 0 18px!important;border-radius:30px!important;text-align:center!important;border:none!important}
   .hero{padding:35px 16px;gap:24px;text-align:center}
   .hero-gauche{width:100%}
   .hero h1{font-size:30px}
@@ -156,7 +148,6 @@ button{cursor:pointer}
   .hero-droite{height:auto!important;display:flex!important;flex-direction:column!important;gap:14px!important;align-items:center!important}
   .photo-flottante{position:static!important;transform:none!important;width:100%!important;max-width:340px!important;height:auto!important;margin:0 auto!important}
   .photo-flottante img{height:180px!important;object-fit:cover}
-  .photo-2,.photo-3{width:100%;max-width:340px;height:auto}
   .stats{padding:24px 14px;gap:12px}
   .stats b{font-size:24px}
   .qui-sommes-nous{padding:35px 16px}
@@ -179,12 +170,11 @@ button{cursor:pointer}
   .quiz-container,.quiz-box{padding:22px 16px}
   .quiz-container h1,.quiz-box h1{font-size:22px}
   .options,.choix,.reponses,.quiz-choix{flex-direction:column!important;gap:10px!important}
-  .options label,.options button,.choix label,.choix button,.quiz-choix a,.quiz-choix button{width:100%!important;white-space:normal!important}
+  .options label,.options button,.quiz-choix a,.quiz-choix button{width:100%!important;white-space:normal!important}
 }
-
 @media(max-width:480px){
   .bande-defilante{font-size:11px}
-  .logo{font-size:17px;gap:8px}
+  .logo{font-size:16px;gap:8px}
   .logo-bloc{width:44px;height:44px}
   .hero{padding:26px 12px}
   .hero h1{font-size:25px;line-height:1.15}
@@ -216,10 +206,8 @@ button{cursor:pointer}
   .quiz-container,.quiz-box{padding:18px 12px}
   .quiz-container h1,.quiz-box h1{font-size:19px}
 }
-
 @media(max-width:360px){
   .hero h1{font-size:22px}
-  .menu-liens a{font-size:12px;padding:7px 11px}
   .filtres button{padding:7px 12px;font-size:12px}
   .partenaires-pro div{flex:1 1 100%}
 }
