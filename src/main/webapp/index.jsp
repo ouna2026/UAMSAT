@@ -5,6 +5,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UAMSAT - Universite Africaine de Management, des Sciences Appliquees et de Telecommunications</title>
+
+<!-- Logo UAMSAT + Installation PWA -->
+<link rel="icon" type="image/png" href="assets/img/logo-uamsat.png">
+<link rel="apple-touch-icon" href="assets/img/logo-uamsat.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0A1F44">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="UAMSAT">
+
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -154,7 +165,7 @@
   <h2>Nos partenariats</h2>
   <p class="sous">Ils nous font confiance pour former leurs futurs collaborateurs.</p>
   <div class="partenaires-pro">
-    <div><img src="assets/img/logo-ubs.png" alt="UBS" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
+    <div><img src="assets/img/logo-【entity-ubs¦canonical_name=UBS】.png" alt="【entity-UBS¦canonical_name=UBS】" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
     <div><img src="assets/img/logo-aum.png" alt="AUM" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
     <div><img src="assets/img/logo-ist.png" alt="IST" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
     <div><img src="assets/img/logo-cames.png" alt="CAMES" width="140" height="70" style="width:140px;height:70px;object-fit:contain;"></div>
@@ -176,5 +187,12 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js');
+  });
+}
+</script>
 </body>
 </html>
