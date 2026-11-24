@@ -2,7 +2,7 @@
 body{background:#F2F6FC;color:#1A1A1A;overflow-x:hidden}
 i{margin-right:8px}
 a{text-decoration:none}
-
+img{max-width:100%;height:auto}
 
 .bande-defilante{background:#0A234B;color:#fff;overflow:hidden;padding:9px 0;font-size:13px;font-weight:600;white-space:nowrap}
 .defile{display:inline-block;animation:defiler 28s linear infinite}
@@ -10,15 +10,15 @@ a{text-decoration:none}
 .defile span::before{content:"• ";color:#FFD700}
 @keyframes defiler{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
 
-
 nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-content:space-between;align-items:center;background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.08);z-index:100}
-.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px;color:#144A9A}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:22px;color:#144A9A;white-space:nowrap}
 .logo span{color:#C9A227}
-.logo-bloc{position:relative;width:52px;height:52px}
+.logo-bloc{position:relative;width:52px;height:52px;flex-shrink:0}
 .logo-fixe{width:52px;height:52px;object-fit:contain}
 .logo-terre-tourne{position:absolute;right:-6px;bottom:-6px;background:#C9A227;color:#fff;width:22px;height:22px;border-radius:50%;display:flex!important;align-items:center;justify-content:center;font-size:11px;margin:0!important;animation:tournerTerre 8s linear infinite;border:2px solid #fff}
 @keyframes tournerTerre{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-.menu-liens a{color:#1A1A1A;margin-left:22px;font-weight:600;font-size:14px}
+.menu-liens{display:flex;align-items:center;flex-wrap:wrap}
+.menu-liens a{color:#1A1A1A;margin-left:22px;font-weight:600;font-size:14px;white-space:nowrap}
 .menu-liens a:hover{color:#144A9A}
 .btn-or{background:#C9A227!important;color:#fff!important;padding:10px 22px;border-radius:30px;font-weight:800}
 
@@ -34,22 +34,21 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 @keyframes ouvrirRideau{to{transform:translateY(-100%);opacity:0;visibility:hidden}}
 
 .hero{padding:60px 5%;display:flex;gap:40px;align-items:center;background:linear-gradient(135deg,#0A234B 0%,#144A9A 55%,#1E5AA8 100%);color:#fff;min-height:620px}
-.hero-gauche{flex:1.2}
+.hero-gauche{flex:1.2;min-width:0}
 .badge{display:inline-block;background:#C9A227;color:#fff;padding:8px 16px;border-radius:30px;font-size:12px;font-weight:700;letter-spacing:1px}
 .hero h1{font-family:'Playfair Display',serif;font-size:52px;line-height:1.08;margin:20px 0}
 .hero h1 span{color:#FFD700}
 .hero p{color:#E2E8F0;line-height:1.7;font-size:16px;max-width:580px}
 .btns{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
-.btn1{background:#C9A227;color:#fff;padding:14px 28px;border-radius:30px;font-weight:800}
-.btn2{border:2px solid #fff;color:#fff;padding:12px 26px;border-radius:30px;font-weight:700}
+.btn1{background:#C9A227;color:#fff;padding:14px 28px;border-radius:30px;font-weight:800;display:inline-flex;align-items:center;justify-content:center}
+.btn2{border:2px solid #fff;color:#fff;padding:12px 26px;border-radius:30px;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
 .hero-infos{margin-top:28px;display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:#E2E8F0}
-.hero-droite{flex:1;position:relative;height:520px}
+.hero-droite{flex:1;position:relative;height:520px;min-width:0}
 .photo-flottante{position:absolute;background:#fff;color:#1A1A1A;border-radius:18px;padding:10px;box-shadow:0 20px 40px rgba(0,0,0,.35);animation:flotter 4s ease-in-out infinite}
 .photo-flottante p{font-size:12px;font-weight:700;text-align:center;margin-top:8px;color:#144A9A}
 .photo-2{width:230px;height:270px;top:20px;right:0;animation-delay:1s}
 .photo-3{width:210px;height:250px;bottom:20px;left:0;animation-delay:2s}
 @keyframes flotter{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-
 
 .stats{background:#fff;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:35px 5%;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.06);margin:-35px 5% 0;position:relative;z-index:5;border-radius:18px}
 .stats i{color:#144A9A;font-size:24px;display:block;margin-bottom:8px}
@@ -58,7 +57,7 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 
 .qui-sommes-nous{position:relative;padding:70px 5%;display:flex;gap:40px;align-items:center;overflow:hidden}
 .fond-transparent{position:absolute;inset:0;background-image:url('assets/img/photo-classe.jpg');background-size:cover;background-position:center;opacity:0.12}
-.qui-contenu{position:relative;z-index:2;flex:1.2}
+.qui-contenu{position:relative;z-index:2;flex:1.2;min-width:0}
 .qui-contenu h2{font-family:'Playfair Display',serif;font-size:36px;color:#144A9A}
 .qui-contenu h2 span{color:#C9A227}
 .qui-contenu p{color:#475569;line-height:1.75;margin-top:14px}
@@ -66,7 +65,7 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 .check div{background:#fff;padding:14px;border-radius:14px;border-left:4px solid #C9A227;font-size:14px;box-shadow:0 5px 15px rgba(0,0,0,.05)}
 .check i{color:#1E9E4A}
 .check span{color:#64748B;font-size:13px}
-.qui-photo{position:relative;z-index:2;flex:1}
+.qui-photo{position:relative;z-index:2;flex:1;min-width:0}
 .qui-photo img{border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,.15)}
 
 .filieres{padding:70px 5%;background:#fff}
@@ -76,7 +75,7 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 .filtres button{padding:10px 22px;border-radius:30px;border:2px solid #144A9A;background:#fff;font-weight:700;cursor:pointer}
 .filtres button.actif{background:#144A9A;color:#fff}
 .grille{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.carte{border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.08);background:#fff}
+.carte{border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.08);background:#fff;min-width:0}
 .carte-3d{transition:transform .4s}
 .carte-3d:hover{transform:translateY(-10px) rotateX(4deg) rotateY(-4deg) scale(1.02);box-shadow:0 25px 45px rgba(0,0,0,.18)}
 .carte .haut{height:140px;padding:20px;color:#fff;font-weight:800;font-size:19px;display:flex;align-items:flex-end}
@@ -90,28 +89,25 @@ nav{position:sticky;top:0;width:100%;padding:12px 5%;display:flex;justify-conten
 .tarifs{padding:70px 5%;background:#144A9A;color:#fff}
 .tarifs h2{text-align:center;font-family:'Playfair Display',serif;font-size:34px}
 .tarifs h2 span{color:#FFD700}
-.table-tarifs{max-width:900px;margin:30px auto;background:#fff;color:#1A1A1A;border-radius:18px;overflow:hidden}
+.table-tarifs{max-width:900px;margin:30px auto;background:#fff;color:#1A1A1A;border-radius:18px;overflow:hidden;overflow-x:auto}
 .table-tarifs table{width:100%;border-collapse:collapse;font-size:14px}
-.table-tarifs th{background:#0A234B;color:#fff;padding:14px;text-align:left}
+.table-tarifs th{background:#0A234B;color:#fff;padding:14px;text-align:left;white-space:nowrap}
 .table-tarifs td{padding:14px;border-bottom:1px solid #E2E8F0}
 .paiement-note{text-align:center;margin-top:18px;color:#E2E8F0;font-size:14px;line-height:1.7}
-
 
 .pourquoi{padding:70px 5%;background:#F2F6FC;text-align:center}
 .pourquoi h2{font-family:'Playfair Display',serif;font-size:34px;color:#144A9A}
 .pourquoi h2 span{color:#C9A227}
 .avantages{margin-top:30px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.avantages div{background:#fff;padding:20px;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.05);text-align:left}
+.avantages div{background:#fff;padding:20px;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.05);text-align:left;min-width:0}
 .avantages i{color:#C9A227;font-size:22px;display:block;margin-bottom:10px}
 .avantages span{color:#64748B;font-size:13px}
-
 
 .partenaires{padding:60px 5%;background:#fff;text-align:center}
 .partenaires h2{font-family:'Playfair Display',serif;color:#144A9A;font-size:32px}
 .partenaires p.sous{color:#64748B;margin-top:10px}
 .partenaires-pro{display:flex;flex-direction:row;justify-content:center;align-items:center;gap:24px;flex-wrap:wrap;margin-top:30px}
 .partenaires-pro div{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:14px;padding:16px 20px;display:flex;align-items:center;justify-content:center;min-width:160px;height:95px}
-
 
 footer{background:#0A234B;color:#CBD5E1;padding:45px 5% 20px}
 footer h3{color:#fff;font-size:24px}
@@ -123,6 +119,13 @@ footer h3 span{color:#FFD700}
 .foot-liens a:hover{color:#FFD700}
 .foot-bas{text-align:center;margin-top:25px;font-size:12px;border-top:1px solid rgba(255,255,255,.15);padding-top:15px}
 
+.quiz-container,.quiz-box,.quiz-wrap,.question-box{width:100%;max-width:900px;margin:0 auto;padding:30px 5%;box-sizing:border-box}
+.quiz-container h1,.quiz-box h1{font-size:30px;color:#144A9A;line-height:1.3}
+.options,.choix,.reponses{display:flex;flex-direction:column;gap:12px;margin-top:18px}
+.options label,.options button,.choix label,.choix button,.reponses label,.reponses button{width:100%;text-align:left;white-space:normal;line-height:1.5;padding:14px 16px;border:2px solid #E2E8F0;border-radius:14px;background:#fff;cursor:pointer;font-size:15px}
+input,select,textarea{max-width:100%;font-size:16px}
+button{cursor:pointer}
+
 @media(max-width:900px){
     .hero{flex-direction:column;min-height:auto}
     .hero h1{font-size:36px}
@@ -133,19 +136,88 @@ footer h3 span{color:#FFD700}
     .avantages{grid-template-columns:1fr 1fr}
     .menu-liens a{margin-left:12px;font-size:13px}
 }
-@media(max-width:600px){
-    .bande-defilante{font-size:11px}
-    nav{flex-direction:column;gap:12px}
-    .hero{padding:40px 5%}
-    .hero-droite{height:480px}
-    .photo-2{width:190px;height:240px}
-    .photo-3{width:170px;height:220px}
-    .grille{grid-template-columns:1fr}
-    .avantages{grid-template-columns:1fr}
-    .check{grid-template-columns:1fr}
-    .table-tarifs{font-size:12px}
-    .table-tarifs th,.table-tarifs td{padding:10px 8px}
+
+@media(max-width:768px){
+    nav{padding:10px 14px;flex-direction:column;align-items:stretch;gap:10px}
+    .logo{font-size:19px;justify-content:center}
+    .menu-liens{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .menu-liens::-webkit-scrollbar{display:none}
+    .menu-liens a{margin-left:0;margin-right:8px;background:#F2F6FC;padding:8px 14px;border-radius:20px;flex-shrink:0}
+    .menu-liens a.btn-or{padding:8px 14px}
+    .hero{padding:35px 16px;gap:24px;text-align:center}
+    .hero-gauche{width:100%}
+    .hero h1{font-size:30px}
+    .hero p{font-size:14px;margin:0 auto}
+    .btns{justify-content:center}
+    .btn1,.btn2{width:100%;max-width:360px}
+    .hero-infos{justify-content:center;font-size:12px}
+    /* LE FIX IMPORTANT : photos ne sont plus absolute, elles ne se coincent plus */
+    .hero-droite{height:auto!important;display:flex;flex-direction:column;gap:14px;align-items:center}
+    .photo-flottante{position:static!important;transform:none!important;animation:flotter 4s ease-in-out infinite;width:100%!important;max-width:340px;height:auto!important}
+    .photo-flottante img{height:180px!important;object-fit:cover}
+    .photo-2,.photo-3{width:100%;max-width:340px;height:auto}
+    .stats{padding:24px 14px;gap:12px}
+    .stats b{font-size:24px}
+    .qui-sommes-nous{padding:35px 16px}
+    .qui-contenu h2{font-size:26px}
+    .check{grid-template-columns:1fr 1fr}
+    .filieres{padding:35px 16px}
+    .filieres h2{font-size:24px}
+    .filtres button{padding:8px 16px;font-size:13px}
+    .grille{grid-template-columns:1fr 1fr}
+    .tarifs{padding:35px 14px}
+    .tarifs h2{font-size:24px}
+    .table-tarifs table{min-width:560px;font-size:13px}
+    .pourquoi{padding:35px 16px}
+    .pourquoi h2{font-size:24px}
     .partenaires-pro{gap:12px}
-    .partenaires-pro div{min-width:130px;height:80px;padding:10px}
-    #rideau h1{font-size:36px;letter-spacing:4px}
+    .partenaires-pro div{min-width:140px;height:80px;padding:10px;flex:1 1 40%}
+    .foot{flex-direction:column;gap:16px}
+    #rideau{padding:20px 16px}
+    #rideau h1{font-size:38px;letter-spacing:4px}
+    .quiz-container,.quiz-box{padding:22px 16px}
+    .quiz-container h1,.quiz-box h1{font-size:22px}
+    .options label,.options button,.choix label,.choix button{font-size:14px;padding:12px}
+}
+@media(max-width:480px){
+    .bande-defilante{font-size:11px}
+    .logo{font-size:17px;gap:8px}
+    .logo-bloc{width:44px;height:44px}
+    .hero{padding:26px 12px}
+    .hero h1{font-size:25px;line-height:1.15}
+    .badge{font-size:10px;padding:6px 12px}
+    .btn1,.btn2{width:100%;max-width:100%;padding:13px 16px;font-size:14px}
+    .hero-infos{flex-direction:column;gap:6px;align-items:center}
+    .photo-flottante{max-width:100%}
+    .stats{grid-template-columns:1fr 1fr;margin:-15px 12px 0;padding:20px 10px}
+    .stats b{font-size:20px}
+    .stats span{font-size:11px}
+    .qui-sommes-nous{padding:26px 12px}
+    .qui-contenu h2{font-size:22px}
+    .check{grid-template-columns:1fr}
+    .filieres{padding:26px 12px}
+    .grille{grid-template-columns:1fr}
+    .carte .haut{font-size:17px;height:120px}
+    .avantages{grid-template-columns:1fr}
+    .tarifs{padding:26px 10px}
+    .table-tarifs table{min-width:520px;font-size:12px}
+    .table-tarifs th,.table-tarifs td{padding:10px 8px}
+    .partenaires{padding:30px 12px}
+    .partenaires-pro div{min-width:0;flex:1 1 44%;height:72px;padding:8px}
+    .partenaires-pro img{height:55px!important}
+    footer{padding:28px 12px 16px}
+    #rideau h1{font-size:30px;letter-spacing:2px}
+    #rideau .rideau-univ{font-size:11px;letter-spacing:1px}
+    #rideau .rideau-slogan{font-size:17px}
+    #rideau .rideau-barre{width:170px}
+    .quiz-container,.quiz-box{padding:18px 12px}
+    .quiz-container h1,.quiz-box h1{font-size:19px}
+}
+
+@media(max-width:360px){
+    .hero h1{font-size:22px}
+    .stats{grid-template-columns:1fr 1fr}
+    .menu-liens a{font-size:12px;padding:7px 11px}
+    .filtres button{padding:7px 12px;font-size:12px}
+    .partenaires-pro div{flex:1 1 100%}
 }
