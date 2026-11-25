@@ -8,6 +8,12 @@
 <link rel="stylesheet" href="style.css?v=6">
 <link rel="shortcut icon" type="image/png" href="assets/img/logo-uamsat.png?v=6">
 <link rel="icon" type="image/png" href="assets/img/logo-uamsat.png?v=6">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0A234B">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="UAMSAT">
+<link rel="apple-touch-icon" href="assets/img/logo-uamsat.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
