@@ -116,7 +116,7 @@ footer h3{color:#fff}
       </ul>
     </div>
     <div class="about-photo">
-      <img src="assets/img/logo-photo.png" alt="Inscriptions en cours UAMSAT">
+      <img src="assets/img/a.png" alt="Inscriptions en cours UAMSAT">
       <p>INSCRIPTIONS EN COURS - 2026-2027</p>
     </div>
   </div>
