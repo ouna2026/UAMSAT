@@ -173,5 +173,23 @@
 </footer>
 
 <script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var burger = document.getElementById('menuBurger');
+  var liens = document.getElementById('menuLiens');
+  if(burger && liens){
+    burger.addEventListener('click', function(){
+      liens.classList.toggle('ouvert');
+      burger.classList.toggle('ouvert');
+    });
+    liens.querySelectorAll('a').forEach(function(l){
+      l.addEventListener('click', function(){
+        liens.classList.remove('ouvert');
+        burger.classList.remove('ouvert');
+      });
+    });
+  }
+});
+</script>
 </body>
 </html>
